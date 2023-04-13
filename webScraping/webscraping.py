@@ -20,9 +20,18 @@ results = s.find(id="ResultsContainer")
 # Find all the elements on the web page with the tag <h2> and class "title is-5"
 job_title = results.find_all("h2", class_="title is-5")
 
+job_link = results.find_all("a", class_="card-footer-item")
 # Uncomment the following line to print the text of the first job title to the console
-# print(job_title[0].text)
+#print(job_title[0].text)
 
 # Loop through each job title and print its text to the console
-for job in job_title:
+#for job in job_title:
+ #   print(job.text)
+
+#Here, the zip function combines the job_link and job_title lists into a single iterator, so that the for loop will iterate over both lists in parallel. Inside the loop, we can access both the link object and the job object at the same time, and print the link href attribute and the job title text.
+for link, job in zip(job_link, job_title):
+    print(link.get('href'))
     print(job.text)
+
+    
+
