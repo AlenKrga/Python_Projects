@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 
 pygame.init()
-
+# This code sets up a "clock" object using the Pygame library and sets the desired frames per second (fps) to 60. The clock object is an essential tool for regulating the frame rate of the game loop. It ensures that the game runs at a consistent speed, regardless of the hardware it is running on.
 clock = pygame.time.Clock()
 fps = 60
 
