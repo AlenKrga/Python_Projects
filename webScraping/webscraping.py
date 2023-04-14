@@ -31,7 +31,8 @@ job_link = results.find_all("a", class_="card-footer-item")
 #Here, the zip function combines the job_link and job_title lists into a single iterator, so that the for loop will iterate over both lists in parallel. Inside the loop, we can access both the link object and the job object at the same time, and print the link href attribute and the job title text.
 for link, job in zip(job_link, job_title):
     print(link.get('href'))
-    print(job.text)
+    print("\033[32m" + job.text + "\033[0m")
+
 
     
 
