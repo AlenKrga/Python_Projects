@@ -8,7 +8,7 @@ dura = int(input("Event duration (minutes): "))
 given_time_in_minutes = (hour * 60)+ mins
 
 # duration added to time
-total_time_in_minutes = given_time_in_minutes + dura
+total_time_in_minutes = (given_time_in_minutes + dura) % (24*60)
 
 final_hours = total_time_in_minutes // 60
 final_minutes = total_time_in_minutes % 60
